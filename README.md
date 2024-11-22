@@ -60,7 +60,7 @@ To get this project up and running on your local machine, follow these steps:
 
    ```bash
    git clone https://github.com/Himel-Sarder/BurgerClub-Django.git
-   cd burgerclub
+   cd burger_king
    ```
 
 2. If you're using Django (or another backend), create a virtual environment:
