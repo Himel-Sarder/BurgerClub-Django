@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="flex flex-col items-center mt-12">
+    <!-- Menu Section Title -->
+    <h1 class="text-5xl font-bold mb-8">MENU - Burger Club</h1>
+
+    <!-- Grid Container for Menu Items -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 ml-8 mr-8">
+        {% for item in menu_items %}
+            <!-- Individual Menu Item Card -->
+            <div class="bg-[#007f66] p-4 rounded-lg shadow-lg flex flex-col h-full">
+                
+                <!-- Image Section -->
+                <img src="{{ item.image.url }}" alt="{{ item.name }}" class="rounded-t-lg h-40 w-full object-cover mb-4">
+                
+                <!-- Text Content Section -->
+                <div class="flex flex-col flex-grow space-y-2">
+                    <!-- Item Name -->
+                    <h2 class="text-xl font-semibold text-white">{{ item.name }}</h2>
+
+                    <!-- Item Description -->
+                    <p class="text-sm text-gray-300 flex-1">{{ item.description }}</p>
+
+                    <!-- Item Price -->
+                    <p class="font-bold text-lg text-white">${{ item.price }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

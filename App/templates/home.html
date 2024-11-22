@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Burger Club{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="flex items-center justify-center px-10 lg:px-32 mt-8">
+        <!-- Text Section on the Left -->
+        <div class="text-left max-w-lg space-y-2">
+            <!-- Main Heading with Gradient and Drop Shadow -->
+            <h1 class="text-4xl md:text-4xl font-extrabold bg-clip-text mb-2">
+                The Ultimate
+            </h1>
+
+            <!-- Subheading with Bold, Italic, and Gradient Effect -->
+            <h2
+                class="text-6xl md:text-8xl font-bold italic text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900 drop-shadow-md font-[Rowdies] p-6">
+                Burger Club
+            </h2>
+
+            <!-- Tagline with Lighter Font Weight and Shadow -->
+            <p class="mt-2 text-3xl font-semibold text-gray-100 drop-shadow-md tracking-wide">
+                Savor the Flavor, Join the Club!
+            </p>
+
+            <!-- Burger Thumbnails Section with Increased Padding and Spacing -->
+            <section class="flex justify-center space-x-8 mt-8 pt-8 px-16 lg:px-40">
+                <img src="{% static '01.jpeg' %}" alt="Burger 1"
+                    class="w-32 h-32 rounded-lg shadow-2xl hover:scale-105 transform transition duration-300 ease-in-out">
+                <img src="{% static '02.jpeg' %}" alt="Burger 2"
+                    class="w-32 h-32 rounded-lg shadow-2xl hover:scale-105 transform transition duration-300 ease-in-out">
+                <img src="{% static '03.jpeg' %}" alt="Burger 3"
+                    class="w-32 h-32 rounded-lg shadow-2xl hover:scale-105 transform transition duration-300 ease-in-out">
+            </section>
+        </div>
+
+        <!-- Main Burger Image on the Right -->
+        <div class="flex justify-end">
+            <img src="{% static 'burger.png' %}" alt="Burger" class="w-[650px] h-auto">
+        </div>
+    </section>
+{% endblock %}

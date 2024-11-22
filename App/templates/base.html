@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Burger Club{% endblock %}</title>
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Lobster&family=Rowdies:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS for scrolling indicator -->
+    <style>
+        /* Scrolling Indicator */
+        #scrollIndicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background-color: #3cb371; /* Tailwind yellow-400 */
+            z-index: 50;
+        }
+    </style>
+
+    {% block head %}
+    <!-- Additional CSS or JS can be included here -->
+    {% endblock %}
+</head>
+
+<body class="bg-[#1c352d] text-white font-sans">
+
+    <!-- Scrolling Indicator -->
+    <div id="scrollIndicator"></div>
+
+    <!-- Logo on the Left -->
+    <div class="absolute top-10 left-20 text-6xl font-bold">BURGER</div>
+
+    <!-- Centered Navbar -->
+    <header class="flex flex-col items-center justify-center h-full">
+        <nav class="space-x-6 text-3xl mt-12">
+            <!--
+            <a href="/" class="hover:text-gray-300">Home</a>
+            <a href="/menu" class="hover:text-gray-300">Menu</a>
+            <a href="/about" class="hover:text-gray-300">About</a>
+            <a href="/contact" class="hover:text-gray-300">Contact</a>
+        -->
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        <!-- Content for each page will be inserted here -->
+        {% endblock %}
+    </main>
+
+    {% block footer %}
+    <!-- Footer Navbar -->
+    <footer class="fixed bottom-0 left-0 w-full bg-[#1c352d] opacity-50 text-white text-center py-4">
+        <div class="flex justify-around">
+            <a href="/" class="flex flex-col items-center hover:text-[#3cb371]">
+                <i class="fas fa-home text-xl"></i>
+                <span>Home</span>
+            </a>
+            <a href="/menu" class="flex flex-col items-center hover:text-[#3cb371]">
+                <i class="fas fa-utensils text-xl"></i>
+                <span>Menu</span>
+            </a>
+            <a href="/about" class="flex flex-col items-center hover:text-[#3cb371]">
+                <i class="fas fa-info-circle text-xl"></i>
+                <span>About</span>
+            </a>
+            <a href="/contact" class="flex flex-col items-center hover:text-[#3cb371]">
+                <i class="fas fa-envelope text-xl"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </footer>
+    {% endblock %}
+
+    <!-- JavaScript for Scrolling Indicator -->
+    <script>
+        window.onscroll = function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("scrollIndicator").style.width = scrolled + "%";
+        };
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us - Burger Club{% endblock %}
+
+{% block content %}
+<section class="contact-header bg-[#1c352d] text-white py-12 text-center">
+    <h2 class="text-5xl font-bold mb-2">Contact Us</h2>
+    <p class="text-lg">We're here to help! Feel free to reach out to us.</p>
+</section>
+
+<section class="flex flex-col items-center bg-[#1c352d] py-6 text-white">
+    <div class="flex flex-col md:flex-row justify-center items-center w-full max-w-5xl space-y-8 md:space-y-0">
+        
+        <!-- Centered Contact Details and Social Media Links -->
+        <div class="contact-info flex flex-col space-y-4 px-4 md:w-1/2 text-center md:text-center">
+            <div class="contact-details">
+                <h3 class="text-5xl font-semibold mb-2">Our Location</h3>
+                <p class="mb-1 text-2xl"><i class="fas fa-map-marker-alt"></i> 123 Verdant Street, Green City, Country</p>
+                <p class="mb-1 text-2xl"><i class="fas fa-phone"></i> <strong>Phone:</strong> +123 456 7890</p>
+                <p class="text-2xl"><i class="fas fa-envelope"></i> <strong>Email:</strong> info@verdanttable.com</p>
+            </div>
+
+            <div class="h-6 m-6 p-6">
+                <h3 class="text-3xl font-semibold mb-2">Connect with Us</h3>
+                <div class="space-x-3 flex justify-center h-10">
+                    <a href="https://facebook.com" target="_blank" class="text-blue-600 hover:text-blue-300"><i class="fab fa-facebook fa-3x"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="text-pink-500 hover:text-pink-300"><i class="fab fa-instagram fa-3x"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="text-blue-400 hover:text-blue-300"><i class="fab fa-twitter fa-3x"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Compact Contact Form -->
+        <div class="contact-form max-w-xs mx-auto px-10 py-4 bg-white text-green-800 shadow-md rounded-lg transition duration-300 transform hover:shadow-lg md:w-1/3">
+            <h3 class="text-xl font-semibold text-center mb-4">Send Us a Message</h3>
+            <form action="{% url 'contact' %}" method="post" class="space-y-3">
+                {% csrf_token %}
+                <div>
+                    <label for="name" class="block text-sm font-medium mb-1">Name:</label>
+                    <input type="text" id="name" name="name" required
+                           class="w-full px-2 py-1 border rounded-md focus:outline-none focus:border-green-500">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium mb-1">Email:</label>
+                    <input type="email" id="email" name="email" required
+                           class="w-full px-2 py-1 border rounded-md focus:outline-none focus:border-green-500">
+                </div>
+                <div>
+                    <label for="subject" class="block text-sm font-medium mb-1">Subject:</label>
+                    <input type="text" id="subject" name="subject" required
+                           class="w-full px-2 py-1 border rounded-md focus:outline-none focus:border-green-500">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium mb-1">Message:</label>
+                    <textarea id="message" name="message" rows="3" required
+                              class="w-full px-2 py-1 border rounded-md focus:outline-none focus:border-green-500"></textarea>
+                </div>
+                <button type="submit" class="w-full py-2 mt-2 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-colors transform hover:scale-105">
+                    Submit
+                </button>
+            </form>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
