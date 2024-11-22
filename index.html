@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger King</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Lobster&family=Rowdies:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#1c352d] text-white font-sans">
+
+    <!-- Logo on the Left -->
+    <div class="absolute top-10 left-20 text-6xl font-bold">BURGER</div>
+
+    <!-- Centered Navbar -->
+    <header class="flex flex-col items-center justify-center h-full">
+        <nav class="space-x-6 text-3xl mt-12">
+            <a href="#" class="hover:text-gray-300">Home</a>
+            <a href="#" class="hover:text-gray-300">Menu</a>
+            <a href="#" class="hover:text-gray-300">About</a>
+            <a href="#" class="hover:text-gray-300">Shop</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="flex items-center justify-center px-10 lg:px-32 mt-8">
+        <!-- Text Section on the Left -->
+        <div class="text-left max-w-lg space-y-2">
+            <!-- Main Heading with Gradient and Drop Shadow -->
+            <h1 class="text-4xl md:text-4xl font-extrabold bg-clip-text mb-2">
+                The Ultimate
+            </h1>
+
+            <!-- Subheading with Bold, Italic, and Gradient Effect -->
+            <h2
+                class="text-6xl md:text-8xl font-bold italic text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-900 drop-shadow-md font-[Rowdies] p-6">
+                Burger Club
+            </h2>
+
+            <!-- Tagline with Lighter Font Weight and Shadow -->
+            <p class="mt-2 text-3xl font-semibold text-gray-100 drop-shadow-md tracking-wide">
+                Savor the Flavor, Join the Club!
+            </p>
+
+            <!-- Burger Thumbnails Section with Increased Padding and Spacing -->
+            <section class="flex justify-center space-x-8 mt-8 pt-8 px-16 lg:px-40">
+                <img src="01.jpeg" alt="Burger 1"
+                    class="w-32 h-32 rounded-lg shadow-2xl hover:scale-105 transform transition duration-300 ease-in-out">
+                <img src="02.jpeg" alt="Burger 2"
+                    class="w-32 h-32 rounded-lg shadow-2xl hover:scale-105 transform transition duration-300 ease-in-out">
+                <img src="03.jpeg" alt="Burger 3"
+                    class="w-32 h-32 rounded-lg shadow-2xl hover:scale-105 transform transition duration-300 ease-in-out">
+            </section>
+        </div>
+
+
+        <!-- Main Burger Image on the Right -->
+        <div class="flex justify-end">
+            <img src="burger.png" alt="Burger" class="w-[650px] h-auto">
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>
