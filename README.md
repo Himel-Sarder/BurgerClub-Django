@@ -1,6 +1,10 @@
 # BurgerClub
 
 Welcome to **BurgerClub**, an exciting web application that brings the ultimate burger experience to your fingertips! Our platform showcases the best burgers, from delicious flame-grilled patties to the perfect toppings and sides. Join us in savoring the flavor and becoming a part of the BurgerClub!
+![image](https://github.com/user-attachments/assets/72c95f85-5247-4e06-a110-3c23afec40ae)
+![image](https://github.com/user-attachments/assets/6b7857c3-87b6-44d7-9155-f5607385907b)
+![image](https://github.com/user-attachments/assets/85fab8f7-591e-45e8-96c8-9a419d7e0c34)
+![image](https://github.com/user-attachments/assets/beda3488-02b7-42c8-ab2c-29d8bcd7466e)
 
 ## Table of Contents
 - [Overview](#overview)
@@ -35,8 +39,7 @@ This project is built using the following technologies:
   - Font Awesome (for icons)
   - Google Fonts
 - **Backend** (optional if applicable):
-  - Django (if you're using a Django backend)
-  - SQLite / PostgreSQL (database, if applicable)
+  - Django 
   
 - **Other Libraries**:
   - **Font Awesome** for icons
@@ -56,7 +59,7 @@ To get this project up and running on your local machine, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/burgerclub.git
+   git clone https://github.com/Himel-Sarder/BurgerClub-Django.git
    cd burgerclub
    ```
 
@@ -68,12 +71,6 @@ To get this project up and running on your local machine, follow these steps:
    ```
 
 3. Install the dependencies:
-
-   - For Django backend (if applicable):
-
-     ```bash
-     pip install -r requirements.txt
-     ```
 
    - Install Tailwind CSS (if not already set up):
 
